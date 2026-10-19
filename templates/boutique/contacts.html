@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}Адреса и контакты — Colibri LOOK{% endblock %}
+{% block content %}<div class="wrap page-content"><div class="page-heading"><h1>Наши бутики</h1><p>Встретимся в Краснодаре. Выберите удобный адрес для примерки.</p></div>{% include 'boutique/_stores.html' %}<section class="contact-channel"><h2>Colibri на связи</h2><p>Новые поступления, сочетания вещей и жизнь бутика — в нашем Telegram.</p><a class="button" href="{{ site.telegram_url }}" target="_blank" rel="noopener noreferrer">Открыть канал</a></section></div>{% endblock %}

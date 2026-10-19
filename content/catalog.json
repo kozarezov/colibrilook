@@ -1,0 +1,523 @@
+{
+  "products": [
+    {
+      "slug": "windbreaker",
+      "name": "Ветровка с контрастными рукавами",
+      "category": "outerwear",
+      "price": 6860,
+      "sizes": "",
+      "colors": "Бежевый / чёрный",
+      "seed_image": "images/editorial/9877.webp",
+      "source_url": "https://t.me/colibri_look/9875",
+      "price_checked_at": "2026-10-13",
+      "description": "Объёмный воротник и контрастные рукава. Ветровка из осенних образов Colibri. Цена — за ветровку.",
+      "photos": [
+        "images/editorial/9876.webp",
+        "images/editorial/9878.webp",
+        "images/editorial/9857.webp",
+        "images/editorial/9854.webp"
+      ],
+      "seed_video": "",
+      "is_featured": true,
+      "availability": "ask"
+    },
+    {
+      "slug": "hooded-longsleeve",
+      "name": "Лонгслив с капюшоном",
+      "category": "tops",
+      "price": 3660,
+      "sizes": "42–48",
+      "colors": "Чёрный",
+      "seed_image": "images/editorial/9905.webp",
+      "source_url": "https://t.me/colibri_look/9909",
+      "price_checked_at": "2026-10-18",
+      "description": "Лонгслив с капюшоном и акцентом на талии. Лосины и баска приобретаются отдельно.",
+      "photos": [
+        "images/editorial/9907.webp"
+      ],
+      "seed_video": "video/9906.mp4",
+      "is_featured": true,
+      "availability": "ask",
+      "card_focus": "top"
+    },
+    {
+      "slug": "suit-latte",
+      "name": "Костюм в оттенке латте",
+      "category": "suits",
+      "price": 9660,
+      "sizes": "S, M",
+      "colors": "Латте, синий",
+      "seed_image": "images/editorial/9884.webp",
+      "source_url": "https://t.me/colibri_look/9882",
+      "price_checked_at": "2026-10-14",
+      "description": "Брюки и верх можно носить вместе или сочетать по отдельности. Рассмотрите фактуру и посадку в галерее.",
+      "photos": [
+        "images/editorial/9887.webp",
+        "images/editorial/9888.webp",
+        "images/editorial/9889.webp",
+        "images/editorial/9891.webp"
+      ],
+      "seed_video": "video/9886.mp4",
+      "is_featured": true,
+      "availability": "ask"
+    },
+    {
+      "slug": "bomber",
+      "name": "Бомбер с цветочным рисунком",
+      "category": "outerwear",
+      "price": 9660,
+      "sizes": "",
+      "colors": "Светлый, цветочный рисунок",
+      "seed_image": "images/editorial/9870.webp",
+      "source_url": "https://t.me/colibri_look/9870",
+      "price_checked_at": "2026-10-13",
+      "description": "Бомбер из осенней подборки. На фотографиях — сочетания с джинсами и брюками из экокожи; цена указана за бомбер.",
+      "photos": [
+        "images/editorial/9870.webp",
+        "images/editorial/9872.webp",
+        "images/editorial/9873.webp"
+      ],
+      "seed_video": "",
+      "is_featured": true,
+      "availability": "ask"
+    },
+    {
+      "slug": "trench",
+      "name": "Тренч с контрастной отделкой",
+      "category": "outerwear",
+      "price": 14660,
+      "sizes": "Единый до 52",
+      "colors": "Бежевый / чёрный",
+      "seed_image": "images/editorial/9879.webp",
+      "source_url": "https://t.me/colibri_look/9814",
+      "price_checked_at": "2026-09-30",
+      "description": "Тренч собственного производства Colibri. Контрастная отделка и свободный силуэт; покажем посадку в видео.",
+      "photos": [
+        "images/editorial/9880.webp",
+        "images/editorial/9830.webp",
+        "images/editorial/9837.webp"
+      ],
+      "seed_video": "video/9832.mp4",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "viscose-longsleeve",
+      "name": "Лонгслив с вырезом лодочкой",
+      "category": "tops",
+      "price": 1960,
+      "sizes": "S, M",
+      "colors": "Чёрный",
+      "seed_image": "images/editorial/9911.webp",
+      "source_url": "https://t.me/colibri_look/9909",
+      "price_checked_at": "2026-10-18",
+      "description": "Вискозный лонгслив с вырезом лодочкой. Точный состав уточняйте у консультанта.",
+      "photos": [],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "leggings",
+      "name": "Лосины",
+      "category": "bottoms",
+      "price": 2160,
+      "sizes": "S, M, L",
+      "colors": "Чёрный",
+      "seed_image": "images/editorial/9908.webp",
+      "source_url": "https://t.me/colibri_look/9909",
+      "price_checked_at": "2026-10-18",
+      "description": "Лосины из чёрной капсулы. На фотографии — полный образ, цена указана только за лосины.",
+      "photos": [],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask",
+      "card_focus": "bottom"
+    },
+    {
+      "slug": "peplum",
+      "name": "Баска",
+      "category": "accessories",
+      "price": 2160,
+      "sizes": "42–48",
+      "colors": "Чёрный",
+      "seed_image": "images/editorial/9907.webp",
+      "source_url": "https://t.me/colibri_look/9909",
+      "price_checked_at": "2026-10-18",
+      "description": "Акцент на талии поверх лонгслива. На фото баска в составе образа. Предзаказ: срок уточняйте в бутике.",
+      "photos": [],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "preorder",
+      "card_focus": "waist"
+    },
+    {
+      "slug": "winter-jacket",
+      "name": "Зимняя куртка с мехом",
+      "category": "outerwear",
+      "price": 18660,
+      "sizes": "",
+      "colors": "Коричневый",
+      "seed_image": "images/editorial/9924.webp",
+      "source_url": "https://t.me/colibri_look/9924",
+      "price_checked_at": "2026-10-19",
+      "description": "Зимняя куртка. Натуральный мех указан в публикации бутика; подробный состав и размерный ряд уточняйте у консультанта.",
+      "photos": [
+        "images/editorial/9925.webp"
+      ],
+      "seed_video": "video/9926.mp4",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "parka",
+      "name": "Парка с мехом",
+      "category": "outerwear",
+      "price": 12660,
+      "sizes": "",
+      "colors": "Тёмно-синий",
+      "seed_image": "images/editorial/9928.webp",
+      "source_url": "https://t.me/colibri_look/9927",
+      "price_checked_at": "2026-10-19",
+      "description": "Парка из новой коллекции верхней одежды. Натуральный мех указан в публикации бутика.",
+      "photos": [
+        "images/editorial/9929.webp",
+        "images/editorial/9930.webp"
+      ],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "autolady",
+      "name": "Куртка автоледи",
+      "category": "outerwear",
+      "price": 12660,
+      "sizes": "",
+      "colors": "Чёрный, коричневый",
+      "seed_image": "images/editorial/9932.webp",
+      "source_url": "https://t.me/colibri_look/9932",
+      "price_checked_at": "2026-10-19",
+      "description": "Укороченная куртка в двух цветах. Подберите свой вариант в одном из бутиков.",
+      "photos": [
+        "images/editorial/9933.webp",
+        "images/editorial/9934.webp"
+      ],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "lyocell-longsleeve",
+      "name": "Лонгслив из лиоцелла",
+      "category": "tops",
+      "price": 2660,
+      "sizes": "",
+      "colors": "Голубой, белый, хаки",
+      "seed_image": "images/editorial/9799.webp",
+      "source_url": "https://t.me/colibri_look/9798",
+      "price_checked_at": "2026-09-30",
+      "description": "Мягкий свободный лонгслив. На съёмке — голубой оттенок. Доступные цвета и размер уточняйте в бутике.",
+      "photos": [
+        "images/editorial/9802.webp",
+        "images/editorial/9803.webp",
+        "images/editorial/9806.webp"
+      ],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "velour-suit",
+      "name": "Велюровый костюм",
+      "category": "suits",
+      "price": 9860,
+      "sizes": "",
+      "colors": "Синий / бордовый",
+      "seed_image": "images/editorial/9757.webp",
+      "source_url": "https://t.me/colibri_look/9780",
+      "price_checked_at": "2026-09-28",
+      "description": "Велюровый комплект с удлинённым худи и контрастными деталями. Цена относится к костюму целиком.",
+      "photos": [
+        "images/editorial/9758.webp",
+        "images/editorial/9759.webp",
+        "images/editorial/9762.webp",
+        "images/editorial/9763.webp"
+      ],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "two-tone-suit",
+      "name": "Двухцветный костюм",
+      "category": "suits",
+      "price": 8660,
+      "sizes": "",
+      "colors": "Голубой / коричневый",
+      "seed_image": "images/editorial/9719.webp",
+      "source_url": "https://t.me/colibri_look/9718",
+      "price_checked_at": "2026-09-20",
+      "description": "Костюм из плащевой ткани в сочетании голубого и коричневого. Детали и посадка — на дополнительных фотографиях.",
+      "photos": [
+        "images/editorial/9723.webp",
+        "images/editorial/9724.webp"
+      ],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "jeans",
+      "name": "Прямые джинсы",
+      "category": "bottoms",
+      "price": 4160,
+      "sizes": "",
+      "colors": "Синий",
+      "seed_image": "images/editorial/9872.webp",
+      "source_url": "https://t.me/colibri_look/9870",
+      "price_checked_at": "2026-10-13",
+      "description": "Джинсы из образа с цветочным бомбером. На фото комплект; цена указана за джинсы.",
+      "photos": [],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "eco-leather-trousers",
+      "name": "Брюки из экокожи",
+      "category": "bottoms",
+      "price": 3860,
+      "sizes": "",
+      "colors": "Чёрный",
+      "seed_image": "images/editorial/9874.webp",
+      "source_url": "https://t.me/colibri_look/9873",
+      "price_checked_at": "2026-10-13",
+      "description": "Брюки из экокожи. На фото с цветочным бомбером; верх и обувь приобретаются отдельно.",
+      "photos": [
+        "images/editorial/9873.webp"
+      ],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "check-shirt",
+      "name": "Рубашка в клетку",
+      "category": "tops",
+      "price": 5860,
+      "sizes": "40–52",
+      "colors": "Коричневая клетка",
+      "seed_image": "images/editorial/9794.webp",
+      "source_url": "https://t.me/colibri_look/9792",
+      "price_checked_at": "2026-09-30",
+      "description": "Рубашка свободного силуэта, единый размер. В исходной публикации указан предзаказ ограниченным тиражом.",
+      "photos": [
+        "images/editorial/9796.webp"
+      ],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "preorder"
+    },
+    {
+      "slug": "stone-bracelet",
+      "name": "Браслет из натуральных камней",
+      "category": "accessories",
+      "price": 1360,
+      "sizes": "",
+      "colors": "Разные сочетания",
+      "seed_image": "images/editorial/9734.webp",
+      "source_url": "https://t.me/colibri_look/9727",
+      "price_checked_at": "2026-09-23",
+      "description": "Ручная работа, разные сочетания камней и подвесок. Цена указана за один браслет. Подбор доступных вариантов — с консультантом.",
+      "photos": [
+        "images/editorial/9727.webp",
+        "images/editorial/9733.webp",
+        "images/editorial/9735.webp"
+      ],
+      "seed_video": "video/9738.mp4",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "perfume-set",
+      "name": "Набор ароматов Colibri",
+      "category": "fragrance",
+      "price": 3860,
+      "sizes": "40 мл",
+      "colors": "",
+      "seed_image": "images/editorial/9742.webp",
+      "source_url": "https://t.me/colibri_look/9741",
+      "price_checked_at": "2026-09-25",
+      "description": "Четыре аромата Colibri LOOK в подарочной упаковке. Общий объём набора — 40 мл.",
+      "photos": [
+        "images/editorial/9744.webp"
+      ],
+      "seed_video": "",
+      "is_featured": false,
+      "availability": "ask"
+    },
+    {
+      "slug": "fragrance-5",
+      "name": "Аромат № 5 · 10 мл",
+      "category": "fragrance",
+      "price": 960,
+      "sizes": "10 мл, 30 мл, 100 мл",
+      "colors": "",
+      "seed_image": "images/editorial/9904-poster.webp",
+      "source_url": "https://t.me/colibri_look/9904",
+      "price_checked_at": "2026-10-17",
+      "description": "Цена карточки — за 10 мл. Также в публикации: 30 мл — 2 860 ₽, 100 мл — 7 660 ₽. Наличие выбранного объёма и цену подтвердит консультант.",
+      "photos": [],
+      "seed_video": "video/9904.mp4",
+      "is_featured": false,
+      "availability": "ask"
+    }
+  ],
+  "looks": [
+    {
+      "slug": "desert-light",
+      "title": "На своей волне.",
+      "description": "Контрастная ветровка на улицах Дубая. Снимки из путешествия Colibri.",
+      "seed_image": "images/editorial/9850.webp",
+      "source_url": "https://t.me/colibri_look/9849",
+      "products": [
+        "windbreaker"
+      ],
+      "seed_video": "",
+      "on_home": true,
+      "seed_hero_image": "images/hero/desert-light-cutout.png",
+      "seed_hero_detail": "images/editorial/9856.webp"
+    },
+    {
+      "slug": "black-capsule",
+      "title": "Чёрный. И ничего лишнего.",
+      "description": "Капюшон, баска, вытянутый силуэт. Три вещи, которые работают вместе.",
+      "seed_image": "images/editorial/9922-poster.webp",
+      "source_url": "https://t.me/colibri_look/9922",
+      "products": [
+        "hooded-longsleeve",
+        "leggings",
+        "peplum"
+      ],
+      "seed_video": "video/9922.mp4",
+      "on_home": true,
+      "seed_hero_image": "images/hero/black-capsule-cutout.png",
+      "seed_hero_detail": "images/editorial/9907.webp"
+    },
+    {
+      "slug": "latte",
+      "title": "Мягкая сторона.",
+      "description": "Костюм в оттенке латте — целиком или по отдельности. Посмотрите, как ткань ведёт себя в движении.",
+      "seed_image": "images/editorial/9882-poster.webp",
+      "source_url": "https://t.me/colibri_look/9882",
+      "products": [
+        "suit-latte"
+      ],
+      "seed_video": "video/9882.mp4",
+      "on_home": true,
+      "seed_hero_image": "images/hero/latte-cutout.png",
+      "seed_hero_detail": "images/editorial/9887.webp"
+    },
+    {
+      "slug": "city-trench",
+      "title": "Выход с характером.",
+      "description": "Контрастный тренч и брюки из экокожи — образ из осенней подборки.",
+      "seed_image": "images/editorial/9835.webp",
+      "source_url": "https://t.me/colibri_look/9830",
+      "products": [
+        "trench",
+        "eco-leather-trousers"
+      ],
+      "seed_video": "video/9832.mp4",
+      "on_home": false
+    },
+    {
+      "slug": "soft-lines",
+      "title": "Мягкие линии.",
+      "description": "Лонгслив с вырезом лодочкой и лосины. Лаконичная чёрная основа для своих сочетаний.",
+      "seed_image": "images/editorial/9911.webp",
+      "source_url": "https://t.me/colibri_look/9909",
+      "products": [
+        "viscose-longsleeve",
+        "leggings"
+      ],
+      "seed_video": "",
+      "on_home": false
+    },
+    {
+      "slug": "blue-note",
+      "title": "Голубой и шоколад.",
+      "description": "Двухцветный костюм из плащевой ткани. Сочетание оттенков, которое собирает весь образ.",
+      "seed_image": "images/editorial/9724.webp",
+      "source_url": "https://t.me/colibri_look/9718",
+      "products": [
+        "two-tone-suit"
+      ],
+      "seed_video": "",
+      "on_home": false
+    }
+  ],
+  "settings": {
+    "image": "",
+    "seed_image": "images/editorial/9892-poster.webp",
+    "image_alt": "Производство Colibri LOOK: работа над изделиями",
+    "video": "",
+    "seed_video": "video/9892.mp4",
+    "tagline": "Характер в каждом движении.",
+    "intro": "Женская одежда, готовые образы и собственное производство. Краснодар.",
+    "about_title": "За вещью — люди.",
+    "about_text": "Мы разрабатываем модели, выбираем ткани и шьём в собственном производстве. Вещь проходит путь от идеи и лекал до вашей примерки. В новом Colibri — больше глубины, силы и смелости быть собой.",
+    "telegram_url": "https://t.me/colibri_look",
+    "instagram_url": "https://www.instagram.com/colibri_look_/",
+    "seo_description": "Colibri LOOK — бутики женской одежды в Краснодаре. Каталог вещей, готовые образы, аксессуары и парфюмерия. Уточните наличие в Telegram."
+  },
+  "stores": [
+    {
+      "name": "На Крузенштерна",
+      "address": "Краснодар, ул. им. Адмирала Крузенштерна, 5",
+      "phone": "+7 905 401-09-95",
+      "telegram": "colibrilook",
+      "hours": "Ежедневно, 10:00–21:00",
+      "map_url": "https://yandex.ru/maps/?text=Краснодар%20Крузенштерна%205%20Colibri%20Look",
+      "is_active": true,
+      "order": 0
+    },
+    {
+      "name": "В ЖК «Самолёт»",
+      "address": "Краснодар, ул. Ивана Беличенко, 92, корпус 2",
+      "phone": "+7 918 686-98-17",
+      "telegram": "b_colibri_look",
+      "hours": "Ежедневно, 10:00–21:00",
+      "map_url": "https://yandex.ru/maps/org/colibri_look/206309671751/",
+      "is_active": true,
+      "order": 1
+    }
+  ],
+  "categories": [
+    [
+      "tops",
+      "Топы и рубашки"
+    ],
+    [
+      "bottoms",
+      "Брюки и джинсы"
+    ],
+    [
+      "suits",
+      "Костюмы"
+    ],
+    [
+      "outerwear",
+      "Верхняя одежда"
+    ],
+    [
+      "accessories",
+      "Аксессуары"
+    ],
+    [
+      "fragrance",
+      "Парфюмерия"
+    ]
+  ]
+}

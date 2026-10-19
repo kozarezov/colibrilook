@@ -1,0 +1,30 @@
+{% extends 'base.html' %}{% load boutique_tags %}
+{% block title %}{{ product.name }} — Colibri LOOK{% endblock %}
+{% block description %}{{ product.name }} в Colibri LOOK, Краснодар. {{ product.description|truncatechars:160 }}{% endblock %}
+{% block content %}<div class="wrap page-content">
+<nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="{% url 'catalog' %}">Каталог</a><span>/</span><a href="{% url 'catalog' %}?category={{ product.category.slug }}">{{ product.category }}</a></nav>
+<div class="product-detail">
+  <div class="product-gallery" data-gallery>
+    <div class="gallery-track" id="product-media" tabindex="0" aria-label="Фотографии и видео товара">
+      {% if product.image_url %}<a class="gallery-slide" href="{{ product.image_url }}" target="_blank" rel="noopener" aria-label="Открыть основное фото крупнее"><img class="main-product-image" src="{{ product.image_url }}" alt="{{ product.image_alt|default:product.name }}" width="600" height="800" fetchpriority="high"></a>{% else %}<div class="gallery-slide image-empty">Фотография скоро</div>{% endif %}
+      {% if product.video_url %}<div class="gallery-slide video-slide"><video controls playsinline preload="none" poster="{{ product.image_url }}" aria-label="Видеопримерка: {{ product.name }}"><source src="{{ product.video_url }}" type="video/mp4"></video></div>{% endif %}
+      {% for photo in product.photos.all %}{% if photo.image_url %}<a class="gallery-slide" href="{{ photo.image_url }}" target="_blank" rel="noopener" aria-label="Открыть дополнительное фото крупнее"><img src="{{ photo.image_url }}" alt="{{ photo.image_alt|default:product.name }}" width="600" height="800" loading="lazy"></a>{% endif %}{% endfor %}
+    </div>
+    <div class="gallery-toolbar"><span data-gallery-count>1 / {{ product.photos.count|add:1 }}{% if product.video_url %} + видео{% endif %}</span><div class="gallery-buttons" hidden><button type="button" data-gallery-prev disabled aria-controls="product-media" aria-label="Предыдущее фото">{% include 'boutique/_icon.html' with icon='left' %}</button><button type="button" data-gallery-next disabled aria-controls="product-media" aria-label="Следующее фото или видео">{% include 'boutique/_icon.html' with icon='right' %}</button></div><span>Листайте, чтобы рассмотреть</span></div>
+    {% if product.video_url %}<a href="#product-media" class="watch-fitting" data-watch-fitting>{% include 'boutique/_icon.html' with icon='play' %} Смотреть видео вещи</a>{% endif %}
+  </div>
+  <div class="product-info"><h1>{{ product.name }}</h1><p class="detail-price">{{ product.price|rubles }}</p><p class="availability">{{ product.get_availability_display }}</p>
+    <div class="product-description">{{ product.description|linebreaks }}</div>
+    {% if product.colors %}<p><strong>Цвет:</strong> {{ product.colors }}</p>{% endif %}
+    {% if product.composition %}<p><strong>Состав:</strong> {{ product.composition }}</p>{% endif %}
+    {% if product.size_options %}<form method="get" class="size-form" novalidate><fieldset><legend>Выберите {{ product.option_label|lower }}</legend><div class="size-options">{% for size in product.size_options %}<button name="size" value="{{ size }}" class="size-button{% if size == selected_size %} selected{% endif %}" aria-pressed="{% if size == selected_size %}true{% else %}false{% endif %}">{{ size }}</button>{% endfor %}</div></fieldset></form>{% elif product.category.slug != "fragrance" %}<p class="muted">Размеры уточняйте у консультанта.</p>{% endif %}
+    <div class="inquiry"><h2>{% if product.availability == 'sold' %}Узнать о поступлении{% else %}Написать в бутик{% endif %}</h2><p>{% if selected_size %}{{ product.option_label }} {{ selected_size }} добавлен в обращение. {% endif %}Откроется Telegram с текстом для консультанта.</p>
+      {% for item in contacts %}<a class="button{% if not forloop.first %} button-secondary{% endif %}" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.store.name }} <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>{% empty %}<a class="button" href="{{ site.telegram_url }}">Открыть Telegram</a>{% endfor %}
+    </div>
+    {% if product.price_checked_at %}<p class="source-note">Цена из публикации от {{ product.price_checked_at|date:'d.m.Y' }}. Актуальную стоимость и наличие подтвердит консультант.{% if product.source_url %} <a class="text-link" href="{{ product.source_url }}" target="_blank" rel="noopener noreferrer">Публикация</a>{% endif %}</p>{% endif %}
+    <details class="faq"><summary>Как заказать?</summary><p>Выберите {{ product.option_label|lower }} и удобный бутик. В Telegram консультант уточнит наличие, посадку, актуальную цену и способ получения. Сообщение отправляете вы сами.</p></details>
+    <details class="faq"><summary>Можно примерить?</summary><p>Ждём вас в наших бутиках. Адреса и часы работы доступны <a class="text-link" href="{% url 'contacts' %}">в разделе «Бутики»</a>. Перед поездкой удобно уточнить наличие нужной вещи.</p></details>
+  </div>
+</div>
+{% if related %}<section class="section"><div class="section-heading"><h2>Ещё в этой категории</h2></div><div class="product-grid">{% for product in related %}{% include 'boutique/_product_card.html' %}{% endfor %}</div></section>{% endif %}
+</div>{% endblock %}

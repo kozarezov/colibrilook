@@ -1,0 +1,40 @@
+{% load static %}<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>{% block title %}Colibri LOOK — одежда и образы в Краснодаре{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ site.seo_description }}{% endblock %}">
+  <meta property="og:title" content="Colibri LOOK · Краснодар">
+  <meta property="og:description" content="{{ site.seo_description }}">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml">
+  <link rel="preload" href="{% static 'fonts/golos-variable.ttf' %}" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="{% static 'css/site.css' %}?v={{ asset_revision }}">
+  <script src="{% static 'js/site.js' %}?v={{ asset_revision }}" defer></script>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+<a href="#main" class="skip-link">Перейти к содержимому</a>
+<header class="site-header wrap" id="top">
+  <a class="logo" href="{% url 'home' %}" aria-label="Colibri LOOK — на главную">colibri<span>LOOK</span></a>
+  <nav class="desktop-nav" aria-label="Основная навигация">
+    <a href="{% url 'catalog' %}" {% if request.resolver_match.url_name == 'catalog' %}aria-current="page"{% endif %}>Каталог</a>
+    <a href="{% url 'looks' %}">Образы</a>
+    <a href="{% url 'about' %}">О Colibri</a>
+    <a href="{% url 'contacts' %}">Бутики</a>
+  </nav>
+  <a class="header-search" href="{% url 'catalog' %}#search" aria-label="Поиск по каталогу"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></a>
+  <a class="header-contact" href="{{ site.telegram_url }}" target="_blank" rel="noopener noreferrer">Мы в Telegram <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+  <details class="mobile-menu"><summary>Меню <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg></summary><nav aria-label="Мобильная навигация"><a href="{% url 'catalog' %}">Каталог</a><a href="{% url 'looks' %}">Образы</a><a href="{% url 'about' %}">О Colibri</a><a href="{% url 'contacts' %}">Бутики</a><a href="{{ site.telegram_url }}">Telegram</a></nav></details>
+</header>
+<main id="main">{% block content %}{% endblock %}</main>
+<footer class="site-footer">
+  <div class="wrap footer-main"><div class="footer-brand"><a class="logo" href="{% url 'home' %}">colibri<span>LOOK</span></a><p>Женская одежда со своим характером.<br>Сделано для ваших образов.</p><a href="{% url 'contacts' %}" class="text-link">Краснодар · ежедневно 10:00–21:00</a></div>
+  <nav aria-label="Каталог в подвале"><h3>Коллекция</h3><a href="{% url 'catalog' %}">Все вещи</a><a href="{% url 'catalog' %}?category=outerwear">Верхняя одежда</a><a href="{% url 'catalog' %}?category=suits">Костюмы</a><a href="{% url 'catalog' %}?category=accessories">Аксессуары</a></nav>
+  <nav aria-label="Информация"><h3>Colibri LOOK</h3><a href="{% url 'about' %}">О бренде</a><a href="{% url 'looks' %}">Готовые образы</a><a href="{% url 'contacts' %}">Адреса бутиков</a><a href="{{ site.instagram_url }}" target="_blank" rel="noopener noreferrer">Instagram</a></nav>
+  <div class="footer-channel"><h3>Примерки, новинки, детали</h3><p>Показываем вещи в движении и рассказываем, с чем их носить.</p><a href="{{ site.telegram_url }}" class="button" target="_blank" rel="noopener noreferrer">Смотреть Telegram {% include 'boutique/_icon.html' %}</a></div></div>
+  <div class="wrap footer-bottom"><span>© {% now 'Y' %} Colibri LOOK</span><p class="footer-credit">Разработано <a href="https://kozarezov.tech" target="_blank" rel="noopener noreferrer">kozarezov.tech</a></p><a href="#top">Наверх {% include 'boutique/_icon.html' %}</a></div>
+</footer>
+</body>
+</html>

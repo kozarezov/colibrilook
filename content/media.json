@@ -1,0 +1,776 @@
+[
+  {
+    "file": "static/images/editorial/9892-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9892?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 589458,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9724.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9724?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 404550,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9837.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9837?single",
+    "width": 449,
+    "height": 800,
+    "bytes": 314948,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9925.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9925?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 345782,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9933.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9933?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 335200,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9876.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9876?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 343086,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9856.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9856?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 237622,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9904-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9904?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 384860,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9905.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9905?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 163812,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9929.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9929?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 335882,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9744.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9744?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 287354,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9928.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9928?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 336200,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9857.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9857?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 305156,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9882-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9882?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 464684,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9932.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9932?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 341924,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9877.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9877?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 251506,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9924.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9924?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 349642,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9926-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9926?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 250658,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9908.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9908?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 163812,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9733.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9733?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 270340,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9850.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9850?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 305084,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9796.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9796?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 385156,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9763.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9763?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 240068,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9734.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9734?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 341008,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9688.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9688?single",
+    "width": 466,
+    "height": 800,
+    "bytes": 304962,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9889.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9889?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 364126,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9759.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9759?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 304578,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9870.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9870?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 398974,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9719.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9719?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 382318,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9934.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9934?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 338168,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9871.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9871?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 395704,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9758.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9758?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 284550,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9888.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9888?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 318256,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9830.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9830?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 252494,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9723.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9723?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 366496,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9735.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9735?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 303190,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9762.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9762?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 257452,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9742.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9742?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 275408,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9884.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9884?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 312018,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9685.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9685?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 369450,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9806.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9806?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 251236,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9851.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9851?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 312904,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9832-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9832?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 428362,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9891.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9891?single",
+    "width": 449,
+    "height": 800,
+    "bytes": 260162,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9887.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9887?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 240500,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9757.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9757?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 344826,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9844.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9844?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 340544,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9794.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9794?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 338438,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9805.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9805?single",
+    "width": 682,
+    "height": 800,
+    "bytes": 411826,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9738-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9738?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 488800,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9872.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9872?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 378468,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9833.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9833?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 261688,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9760.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9760?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 354866,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9886-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9886?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 522368,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9849.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9849?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 315680,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9799.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9799?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 221178,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9873.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9873?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 315476,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9687.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9687?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 303226,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9845.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9845?single",
+    "width": 476,
+    "height": 800,
+    "bytes": 374256,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9922-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9922?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 529656,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9890.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9890?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 214958,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9874.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9874?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 376516,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9835.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9835?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 334104,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9906-poster.webp",
+    "type": "video_poster",
+    "source": "https://t.me/colibri_look/9906?single",
+    "width": 720,
+    "height": 1280,
+    "bytes": 253406,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9878.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9878?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 304676,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9907.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9907?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 132466,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9842.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9842?single",
+    "width": 368,
+    "height": 800,
+    "bytes": 191054,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9803.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9803?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 311440,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9911.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9911?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 175818,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9854.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9854?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 237540,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9802.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9802?single",
+    "width": 600,
+    "height": 800,
+    "bytes": 403408,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9880.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9880?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 335286,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9879.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9879?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 316626,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9727.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9727?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 219964,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/images/editorial/9930.webp",
+    "type": "photo",
+    "source": "https://t.me/colibri_look/9930?single",
+    "width": 450,
+    "height": 800,
+    "bytes": 343840,
+    "processing": "lossless WebP; no upscale"
+  },
+  {
+    "file": "static/video/9922.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9922?single",
+    "bytes": 8333251,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/video/9738.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9738?single",
+    "bytes": 2651004,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/video/9882.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9882?single",
+    "bytes": 8054439,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/video/9892.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9892?single",
+    "bytes": 11483650,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/video/9886.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9886?single",
+    "bytes": 3299987,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/video/9926.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9926?single",
+    "bytes": 2850748,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/video/9832.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9832?single",
+    "bytes": 4463528,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/video/9904.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9904?single",
+    "bytes": 3971045,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/video/9906.mp4",
+    "type": "video",
+    "source": "https://t.me/colibri_look/9906?single",
+    "bytes": 10474581,
+    "processing": "original encoded streams; lossless remux + faststart"
+  },
+  {
+    "file": "static/images/hero/desert-light-cutout.png",
+    "type": "ai_edited_hero_cutout",
+    "source": "https://t.me/colibri_look/9850?single",
+    "original": "static/images/editorial/9850.webp",
+    "width": 941,
+    "height": 1672,
+    "bytes": 1317907,
+    "tool": "built-in image_gen",
+    "prompt_summary": "Background-extraction: isolate the woman only; remove city, water, balcony and all background between arms and torso. Preserve identity, sunglasses, hair, pose, hands, watch, beige/black windbreaker and black shorts. Real alpha transparency, no backdrop, shadow or text. Keep original bottom crop.",
+    "note": "AI background-removal derivative for hero only. Not a pixel-identical original or evidence of higher source detail. Original photographs remain in product/look galleries."
+  },
+  {
+    "file": "static/images/hero/black-capsule-cutout.png",
+    "type": "ai_edited_hero_cutout",
+    "source": "https://t.me/colibri_look/9905?single",
+    "original": "static/images/editorial/9905.webp",
+    "width": 941,
+    "height": 1672,
+    "bytes": 882753,
+    "tool": "built-in image_gen",
+    "prompt_summary": "Background-extraction: isolate the woman and held orange smartphone; remove mirror frame, room, furniture and floor, including gaps around arms and legs. Preserve identity, hood, hands, phone, black top, waist tie, leggings, boots and pose. Real alpha transparency, no backdrop or text.",
+    "note": "AI background-removal derivative for hero only. Not a pixel-identical original or evidence of higher source detail. Original photographs remain in product/look galleries."
+  },
+  {
+    "file": "static/images/hero/latte-cutout.png",
+    "type": "ai_edited_hero_cutout",
+    "source": "https://t.me/colibri_look/9889?single",
+    "original": "static/images/editorial/9889.webp",
+    "width": 941,
+    "height": 1672,
+    "bytes": 2008789,
+    "tool": "built-in image_gen",
+    "prompt_summary": "Background removal only: isolate the seated woman; remove café, furniture, table and drink. Preserve face, seated pose, cream zip-front ribbed outfit, neckline and waistband. Top hem and waistband must touch; no crop-top redesign or exposed midriff. Do not invent hidden body. Real alpha transparency.",
+    "note": "AI background-removal derivative for hero only. Not a pixel-identical original or evidence of higher source detail. Original photographs remain in product/look galleries."
+  }
+]

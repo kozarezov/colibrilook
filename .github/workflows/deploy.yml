@@ -1,0 +1,140 @@
+name: Test and deploy Colibri
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: ci-only-password
+          MYSQL_DATABASE: colibri_ci
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -pci-only-password"
+          --health-interval=10s --health-timeout=5s --health-retries=10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: 'requirements*.txt'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends default-libmysqlclient-dev pkg-config
+          python -m pip install -r requirements-hosting.txt
+      - name: Deployment safety tests
+        run: |
+          python -m compileall -q boutique config deploy
+          python -m unittest discover -s deploy/tests -v
+      - name: Django checks and SQLite tests
+        run: |
+          python manage.py check
+          python manage.py makemigrations --check --dry-run
+          python manage.py test --noinput
+      - name: Test against MySQL
+        env:
+          DATABASE_ENGINE: mysql
+          DATABASE_HOST: 127.0.0.1
+          DATABASE_PORT: '3306'
+          DATABASE_NAME: colibri_ci
+          DATABASE_USER: root
+          DATABASE_PASSWORD: ci-only-password
+        run: python manage.py test --noinput
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment:
+      name: production
+      url: https://colibrilook.ru
+    concurrency:
+      group: colibri-production
+      cancel-in-progress: false
+    env:
+      DEPLOY_HOST: 37.140.192.63
+      DEPLOY_USER: u3688705
+      APP_ROOT: /var/www/u3688705/data/apps/colibri
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+      - name: Refuse stale main deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+          url = f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/git/ref/heads/main"
+          request = urllib.request.Request(url, headers={
+              'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+              'Accept': 'application/vnd.github+json', 'User-Agent': 'colibri-deploy'})
+          with urllib.request.urlopen(request, timeout=20) as response:
+              head = json.load(response)['object']['sha']
+          if head != os.environ['GITHUB_SHA']:
+              raise SystemExit('Main has advanced. Deploy the latest workflow run instead.')
+          PY
+      - name: Build release artifact
+        run: python deploy/package.py "$GITHUB_SHA" "$RUNNER_TEMP/release.tar.gz"
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          test -n "$SSH_PRIVATE_KEY"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s\n' "$SSH_PRIVATE_KEY" > "$HOME/.ssh/colibri_deploy"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/colibri_deploy" "$HOME/.ssh/known_hosts"
+          cat > "$HOME/.ssh/config" <<EOF
+          Host colibri-production
+            HostName $DEPLOY_HOST
+            User $DEPLOY_USER
+            IdentityFile $HOME/.ssh/colibri_deploy
+            IdentitiesOnly yes
+            BatchMode yes
+            StrictHostKeyChecking yes
+            ConnectTimeout 20
+            ServerAliveInterval 15
+            ServerAliveCountMax 8
+          EOF
+      - name: Upload and activate release
+        run: |
+          set -euo pipefail
+          release_id="$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          ssh colibri-production "deploy $GITHUB_SHA $release_id" < "$RUNNER_TEMP/release.tar.gz"
+      - name: Verify public HTTPS
+        run: |
+          curl --fail --silent --show-error --retry 3 --max-time 20 \
+            https://colibrilook.ru/healthz/ > "$RUNNER_TEMP/health.json"
+          python - <<'PY'
+          import json, os
+          with open(os.path.join(os.environ['RUNNER_TEMP'], 'health.json')) as f:
+              health = json.load(f)
+          assert health == {'status': 'ok', 'revision': os.environ['GITHUB_SHA']}, health
+          PY
+      - name: Remove runner SSH key
+        if: always()
+        run: rm -f "$HOME/.ssh/colibri_deploy"

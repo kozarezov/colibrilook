@@ -1,0 +1,38 @@
+[
+  {
+    "file": "static/images/hero/desert-light-cutout.png",
+    "type": "ai_edited_hero_cutout",
+    "source": "https://t.me/colibri_look/9850?single",
+    "original": "static/images/editorial/9850.webp",
+    "width": 941,
+    "height": 1672,
+    "bytes": 1317907,
+    "tool": "built-in image_gen",
+    "prompt_summary": "Background-extraction: isolate the woman only; remove city, water, balcony and all background between arms and torso. Preserve identity, sunglasses, hair, pose, hands, watch, beige/black windbreaker and black shorts. Real alpha transparency, no backdrop, shadow or text. Keep original bottom crop.",
+    "note": "AI background-removal derivative for hero only. Not a pixel-identical original or evidence of higher source detail. Original photographs remain in product/look galleries."
+  },
+  {
+    "file": "static/images/hero/black-capsule-cutout.png",
+    "type": "ai_edited_hero_cutout",
+    "source": "https://t.me/colibri_look/9905?single",
+    "original": "static/images/editorial/9905.webp",
+    "width": 941,
+    "height": 1672,
+    "bytes": 882753,
+    "tool": "built-in image_gen",
+    "prompt_summary": "Background-extraction: isolate the woman and held orange smartphone; remove mirror frame, room, furniture and floor, including gaps around arms and legs. Preserve identity, hood, hands, phone, black top, waist tie, leggings, boots and pose. Real alpha transparency, no backdrop or text.",
+    "note": "AI background-removal derivative for hero only. Not a pixel-identical original or evidence of higher source detail. Original photographs remain in product/look galleries."
+  },
+  {
+    "file": "static/images/hero/latte-cutout.png",
+    "type": "ai_edited_hero_cutout",
+    "source": "https://t.me/colibri_look/9889?single",
+    "original": "static/images/editorial/9889.webp",
+    "width": 941,
+    "height": 1672,
+    "bytes": 2008789,
+    "tool": "built-in image_gen",
+    "prompt_summary": "Background removal only: isolate the seated woman; remove café, furniture, table and drink. Preserve face, seated pose, cream zip-front ribbed outfit, neckline and waistband. Top hem and waistband must touch; no crop-top redesign or exposed midriff. Do not invent hidden body. Real alpha transparency.",
+    "note": "AI background-removal derivative for hero only. Not a pixel-identical original or evidence of higher source detail. Original photographs remain in product/look galleries."
+  }
+]

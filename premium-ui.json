@@ -1,0 +1,11 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": ["templates", "static/css", "static/js"],
+  "locale": "ru-RU",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": ["Form", "CRUD", "Select/Listbox", "Scrollbar"],
+  "ownership": {"Select/Listbox": "native", "Date": "native"},
+  "requiredCommands": ["unit", "check"],
+  "commands": {"unit": ".venv/bin/python manage.py test", "check": ".venv/bin/python manage.py check"},
+  "evidence": {"crudFullFlow": "boutique/tests.py", "failurePaths": "boutique/tests.py"}
+}

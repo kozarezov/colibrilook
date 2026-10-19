@@ -1,0 +1,11 @@
+<div class="store-grid">
+{% for store in stores %}
+  <article class="store reveal">
+    <h3>{{ store.name }}</h3>
+    <p class="store-address">{{ store.address }}</p>
+    <p>{{ store.hours }}</p>
+    <a class="store-phone" href="tel:{{ store.phone_link }}">{{ store.phone }}</a>
+    <div class="store-actions"><a class="text-link" href="{{ store.map_url }}" target="_blank" rel="noopener noreferrer">Построить маршрут</a><a class="text-link" href="{{ store.telegram_url }}" target="_blank" rel="noopener noreferrer">Написать в бутик</a></div>
+  </article>
+{% empty %}<p>Адреса бутиков скоро появятся. Пока мы на связи <a class="text-link" href="{{ site.telegram_url }}">в Telegram</a>.</p>{% endfor %}
+</div>
