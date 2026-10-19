@@ -24,15 +24,15 @@ The SSH public key is installed with `restrict` and a forced command:
 /opt/python/python-3.14/bin/python3 /var/www/u3688705/data/apps/colibri/deploy/receive.py
 ```
 
-It accepts only `deploy <40-character commit SHA> <numeric run ID>-<attempt>` or `check` with the same arguments, with the archive on stdin. `check` prepares the candidate and prints the migration plan, but never applies migrations, creates backups, or switches the site. Interactive shells, SCP, forwarding and arbitrary commands are unavailable with this key. The trusted receiver/controller live in the shared application `deploy/` directory and are installed through the administrator connection. Changes to these controller files require a deliberate administrator update; an uploaded release cannot replace the controller automatically.
+It accepts `deploy <40-character commit SHA> <numeric run ID>-<attempt>` or `check` with the same arguments, with the archive on stdin. `check` prepares the candidate and prints the migration plan, but never applies migrations, creates backups, or switches the site. The only additional command is `manifest`: it returns JSON containing paths and SHA-256 hashes of public source files in the current release's `static/` directory. It cannot read arbitrary paths or private configuration. Interactive shells, SCP, forwarding and arbitrary commands are unavailable with this key. The trusted receiver/controller (`assets.py`, `release.py`, `receive.py`) live in the shared application `deploy/` directory and are installed through the administrator connection. Install `assets.py` before updating its consumers. Changes to these controller files require a deliberate administrator update; an uploaded release cannot replace the controller automatically.
 
 `production.json` and database credentials stay on the server. SSH host verification is mandatory; do not use `StrictHostKeyChecking=no` or `curl -k` in the workflow.
 
 ## Deployment sequence
 
-1. Build an allowlisted archive of application code, static assets and requirements. Local credentials, `.env`, database files, uploads and QA files are excluded.
-2. Stream the archive over SSH to the restricted receiver. Validate its paths, types, size and revision.
-3. Prepare `apps/colibri/releases/<SHA>-<run>-<attempt>` with its own Python environment. The running release continues serving requests.
+1. Fetch the server's static manifest over authenticated SSH. Build an allowlisted archive of application code, requirements, a complete `STATIC_MANIFEST.json`, and only new or changed static assets. Local credentials, `.env`, database files, uploads and QA files are excluded.
+2. Stream the archive over SSH to the restricted receiver. Validate its paths, types, size and revision. Transfer progress and server preparation stages appear in the Actions log.
+3. Prepare `apps/colibri/releases/<SHA>-<run>-<attempt>` with its own Python environment. Copy omitted assets locally from the current release and verify every resulting asset against its expected SHA-256. Only manifest-listed files are included, so removed assets stay removed. Copies are independent files, preserving rollback isolation. Missing, corrupt or stale assets abort preparation before database migrations or activation. The running release continues serving requests.
 4. Install dependencies, run production checks, check migrations and collect static files.
 5. Create a compressed MySQL snapshot and a media archive in `apps/colibri/backups/<release>/` before migrations.
 6. Run migrations. Never run `seed_content`, `loaddata` or replace the production database.
@@ -43,6 +43,18 @@ CSS and JS URLs include the running revision, so browsers fetch the updated file
 9. Verify public HTTPS and the deployed revision from GitHub. DNS/certificate errors fail this external check without silently disabling TLS or undoing a working application deployment.
 
 Three recent release directories and three backup directories are retained after successful deployments. The legacy first installation and its original backups are retained separately. Failed attempts may leave diagnostics in `incoming/` and incomplete release directories; inspect these before cleanup.
+
+### Incremental transfer and recovery
+
+The first measured Actions run spent 9m25s in upload/activation while sending an 83.7 MB archive. Dependencies and checks accounted for a small part of that step. With the same 172 public static files already on the server, the updated builder produced a 47 KB archive locally, about 1,800 times smaller. This is an artifact-size measurement, not a measured end-to-end GitHub deployment time. Uploading new videos still requires transferring their full compressed files; static assets are not recompressed or reduced in quality.
+
+If an operator changes the active release between manifest retrieval and preparation, mismatched reused assets fail safely. Rerun the latest workflow to fetch a fresh manifest. A full standalone artifact can be built by omitting `--base-manifest`:
+
+```sh
+python deploy/package.py "$(git rev-parse HEAD)" /tmp/colibri-release.tar.gz
+```
+
+The updated controller also accepts legacy full archives without a manifest, so the previously pushed workflow remains compatible while this optimization awaits a push. The manifest itself is not cached between workflow runs. Uploads created in the Django admin remain in shared `media/` and are unaffected.
 
 ## Migration limitations
 
@@ -73,3 +85,11 @@ Public DNS and a valid certificate must be working for the final HTTPS check to 
 - Local checks: 33 Django tests, 12 deployment tests, Python compilation and actionlint 1.7.12 passed. Rollback tests cover current/static links and the Passenger startup file.
 - The GitHub-hosted workflow and MySQL CI service have not yet run because the repository has no pushed files. The first owner-authorized push to `main` activates them.
 - A real production test deployment was not performed: automatic approval review rejected migration/application switching without separate approval. The preparation-only check above was used instead.
+
+## Incremental deployment update — 2026-10-19
+
+- Since the initial setup, the owner's push activated GitHub Actions. Run `39250953206` passed tests and installed commit `d749234f8074d08fddbe91e3238b92af79f36fc1`. Only the final public HTTPS check failed while DNS/SSL were unavailable.
+- Added incremental static transfers and progress reporting; preserved backups, migration checks, revision health checks and rollback behavior.
+- Installed the three updated trusted controller files through the hosting panel's authenticated HTTPS file manager, because local SSH connections stalled during banner exchange. Read every file back and verified exact content. Previous `release.py` and `receive.py` are saved beside them with suffix `.before-incremental-20261019`. No application activation or migrations were performed during this update.
+- Verification: 22 deployment tests and 33 Django tests passed; actionlint, Django checks, missing-migration check and Python compilation passed. Tests cover changed/new/deleted assets, missing or corrupt base files, manifest traversal, symlinks, legacy archives and restricted manifest access.
+- An end-to-end incremental check on the server and GitHub timing remain unverified because SSH was unavailable. The GitHub workflow changes are local and have not been pushed; they become active after the owner pushes them to `main`.

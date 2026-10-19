@@ -114,6 +114,7 @@ class ReceiverTests(unittest.TestCase):
         self.assertEqual(command('deploy ' + SHA + ' 123-1'), ('deploy', SHA, '123-1'))
         self.assertEqual(command('check ' + SHA + ' 123-1'), ('check', SHA, '123-1'))
         for value in ('', 'sh', 'cat production.json', 'scp -t /tmp/file',
+                      'manifest ../production.json', 'manifest; id', 'manifest\nid',
                       'deploy ' + SHA + ' 123-1; id', 'deploy ../x 123-1'):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 command(value)

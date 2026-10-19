@@ -14,6 +14,11 @@ import tempfile
 import time
 import urllib.request
 
+if __package__:
+    from .assets import MANIFEST, restore
+else:
+    from assets import MANIFEST, restore
+
 APP = Path('/var/www/u3688705/data/apps/colibri')
 PUBLIC = Path('/var/www/u3688705/data/www/colibrilook.ru')
 PYTHON = '/opt/python/python-3.14/bin/python3'
@@ -21,7 +26,7 @@ ROOTS = {'boutique', 'config', 'templates', 'static', 'deploy'}
 FILES = {'manage.py', 'requirements.txt', 'requirements-hosting.txt', 'content/catalog.json', 'REVISION'}
 
 
-def unpack(archive, destination, revision):
+def unpack(archive, destination, revision, previous=None):
     with tarfile.open(archive, 'r:gz') as bundle:
         members = bundle.getmembers()
         for member in members:
@@ -29,7 +34,7 @@ def unpack(archive, destination, revision):
             if (path.is_absolute() or '..' in path.parts or not path.parts
                     or any(p.startswith('.') or p == '__pycache__' for p in path.parts)
                     or not member.isfile()
-                    or not (path.parts[0] in ROOTS or member.name in FILES)):
+                    or not (path.parts[0] in ROOTS or member.name in FILES | {MANIFEST})):
                 raise ValueError(f'Unsafe archive member: {member.name}')
         if sum(m.size for m in members) > 1024 * 1024 * 1024:
             raise ValueError('Artifact exceeds 1 GiB unpacked')
@@ -39,6 +44,7 @@ def unpack(archive, destination, revision):
     for required in FILES:
         if not (destination / required).is_file():
             raise ValueError(f'Missing required file: {required}')
+    restore(destination, previous)
 
 
 def link(target, name):
@@ -157,6 +163,7 @@ def deploy(archive, revision, run_id, check_only=False):
     os.umask(0o077)
     APP.mkdir(exist_ok=True)
     with (APP / '.deploy.lock').open('w') as lock:
+        print('Waiting for deployment lock', flush=True)
         fcntl.flock(lock, fcntl.LOCK_EX)
         releases = APP / 'releases'
         releases.mkdir(exist_ok=True)
@@ -164,13 +171,16 @@ def deploy(archive, revision, run_id, check_only=False):
         if release.exists():
             raise RuntimeError('Release already exists; rerun with a new attempt ID')
         release.mkdir()
-        unpack(archive, release, revision)
+        print('Preparing release and verifying static assets', flush=True)
+        previous = (APP / 'current').resolve() if (APP / 'current').is_symlink() else APP
+        unpack(archive, release, revision, previous=previous)
         config = json.loads((APP / 'production.json').read_text())
         if config.get('DATABASE_ENGINE') != 'mysql':
             raise RuntimeError('This deployment requires the configured production MySQL database')
         env = dict(os.environ, DJANGO_ENV_FILE=str(APP / 'production.json'),
                    DJANGO_MEDIA_ROOT=str(APP / 'media'), PYTHONDONTWRITEBYTECODE='1')
         def run(*args):
+            print('Running:', ' '.join(args), flush=True)
             subprocess.run(args, cwd=release, env=env, check=True)
         run(PYTHON, '-m', 'venv', str(release / '.venv'))
         python = str(release / '.venv/bin/python')

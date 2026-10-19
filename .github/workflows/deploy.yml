@@ -95,8 +95,6 @@ jobs:
           if head != os.environ['GITHUB_SHA']:
               raise SystemExit('Main has advanced. Deploy the latest workflow run instead.')
           PY
-      - name: Build release artifact
-        run: python deploy/package.py "$GITHUB_SHA" "$RUNNER_TEMP/release.tar.gz"
       - name: Configure SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
@@ -120,6 +118,12 @@ jobs:
             ServerAliveInterval 15
             ServerAliveCountMax 8
           EOF
+      - name: Read server static manifest
+        run: ssh colibri-production manifest > "$RUNNER_TEMP/static-manifest.json"
+      - name: Build incremental release artifact
+        run: |
+          python deploy/package.py "$GITHUB_SHA" "$RUNNER_TEMP/release.tar.gz" \
+            --base-manifest "$RUNNER_TEMP/static-manifest.json"
       - name: Upload and activate release
         run: |
           set -euo pipefail
